@@ -1,0 +1,21 @@
+{
+	"server": "hub.lambdatest.com",
+	"user": "YOUR_USERNAME",
+	"key": "YOUR_ACCESS_KEY",
+
+	"capabilities": {
+		"build": "Java Selenide Single",
+		"visual": true,
+		"network": true,
+		"console": true,
+		"tunnel": false
+	},
+
+	"environments": {
+		"chrome": {
+		    "platform": "windows 10",
+			"browserName": "chrome",
+			"version":"72"
+		}
+	}
+}
