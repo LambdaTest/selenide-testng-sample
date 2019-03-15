@@ -16,7 +16,7 @@
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>2.5</version>
+			<version>2.6</version>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -37,13 +37,13 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.5.6</version>
+			<version>1.7.25</version>
 			<type>jar</type>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
-			<version>1.5.6</version>
+			<version>1.7.25</version>
 		</dependency>
 	</dependencies>
 
@@ -53,12 +53,17 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.1</version>
-				<configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
 			</plugin>
-		</plugins>
+			 <plugin>
+     			 <groupId>org.apache.maven.plugins</groupId>
+      			 <artifactId>maven-compiler-plugin</artifactId>
+      			<version>2.3.2</version>
+      				<configuration>
+        				<source>1.8</source>
+        				<target>1.8</target>
+      				</configuration>
+    		</plugin>
+		</plugins>		
 	</build>
 
 	<profiles>
