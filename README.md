@@ -1,4 +1,4 @@
-# selenide-testng-sample
+# Selenide TestNG Sample
 
 [Selenide](http://selenide.org/) Integration with [LambdaTest](https://www.lambdatest.com/).
 
