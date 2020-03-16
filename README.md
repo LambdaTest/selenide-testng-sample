@@ -1,4 +1,4 @@
-# Selenide TestNG Sample
+# Run Your Selenide Scripts on LambdaTest Selenium Grid
 
 [Selenide](http://selenide.org/) Integration with [LambdaTest](https://www.lambdatest.com/).
 
