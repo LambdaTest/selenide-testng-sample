@@ -29,7 +29,7 @@ LambdaTest integration with Selenide automation framework will help you pace you
    #### This is Windows environment variable location :
    Control Panel > All Control Panel Items > System > Advanced system settings > Environment Variables
    
-   ![altext](https://github.com/keshavissar001/selenide-testng-sample/blob/keshavissar001-patch-1/Img1.png)
+   ![Set Environment Variables](https://github.com/LambdaTest/selenide-testng-sample/blob/master/tutorial-images/Img1.png)
    
 #### For Linux :
    
@@ -66,7 +66,7 @@ LambdaTest integration with Selenide automation framework will help you pace you
    **Step 2:** After cloning, you'll have a zip file downloaded in your system. Right click on the zip file and extract files in your desired location.
    
    **Step 3:** Open terminal or command prompt and bring the pointer to the same folder where you extracted the cloned repository.  
-	![altext](https://github.com/keshavissar001/images/blob/master/SetPath.png)
+	![open clones directory in cmd/terminal](https://github.com/LambdaTest/selenide-testng-sample/blob/master/tutorial-images/SetPath.png)
 
   **Step 4:** Under the folder **“selenide-testng-sample-master”**, add your LambdaTest `username` and `accessKey` to the `src/test/resources/conf` in “selenide-testng-sample-master”
  [For Lambdatest Credentials, Go to Lambdatest Profile Page](https://accounts.lambdatest.com/profile) 
@@ -113,7 +113,7 @@ Here is **single.conf.json** file to setup mandatory details to run at LambdaTes
 
     mvn compile 
   
-![altext](https://github.com/keshavissar001/images/blob/master/mvnCompile.png)
+![altext](https://github.com/LambdaTest/selenide-testng-sample/blob/master/tutorial-images/mvnCompile.png)
 
 Let’s start with a simple Selenium Remote Webdriver test first. This Selenide script below tests whether the expected title is same as that of given page.
 
@@ -283,7 +283,7 @@ You would need to execute the below command in your terminal/cmd :
       
 This is the screenshot of the output :
 
-   ![altext](https://github.com/keshavissar001/images/blob/master/singleTestResult.png)
+   ![altext](https://github.com/LambdaTest/selenide-testng-sample/blob/master/tutorial-images/singleTestResult.png)
 
 ## Executing Parallel Tests In Selenide Automation Framework
 
@@ -374,7 +374,7 @@ You would need to execute the below command in your terminal/cmd :
 
 This is the screenshot of the output :
 
-![altext](https://github.com/keshavissar001/images/blob/master/ParallelResult.png)
+![altext](https://github.com/LambdaTest/selenide-testng-sample/blob/master/tutorial-images/ParallelResult.png)
 
 ## Executing Test Suite In Selenide Automation Framework
 
@@ -655,16 +655,16 @@ You would need to execute the below command in your terminal/cmd :
 
 These are the screenshot of the output :
    
-![altext](https://github.com/keshavissar001/images/blob/master/SuiteResult1%20(2).png)
+![altext](https://github.com/LambdaTest/selenide-testng-sample/blob/master/tutorial-images/SuiteResult1%20(2).png)
 
-![altext](https://github.com/keshavissar001/images/blob/master/SuitrResult2.png)
+![altext](https://github.com/LambdaTest/selenide-testng-sample/blob/master/tutorial-images/SuitrResult2.png)
 
  Want to calculate that how many parallel sessions you need by using our [Parallel Test Calculator](https://www.lambdatest.com/concurrency-calculator?ref=github)
  
  
 Below we see a screenshot that depicts our Selenide code is running over different browsers i.e Chrome, Firefox and Safari on the LambdaTest Selenium Grid Platform. The results of the test script execution along with the logs can be accessed from the LambdaTest Automation dashboard.
 
-![altext](https://github.com/keshavissar001/images/blob/master/AutomationLogs.png)
+![altext](https://github.com/LambdaTest/selenide-testng-sample/blob/master/tutorial-images/AutomationLogs.png)
 
 ##  Testing Locally Hosted or Privately Hosted Projects
 
