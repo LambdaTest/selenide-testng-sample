@@ -18,7 +18,7 @@ LambdaTest integration with Selenide automation framework will help you pace you
 
 ### 1. Java Installation
    
-   i.   For Windows :
+#### For Windows :
    
    You can download Java for Windows from [here](http://www.java.com/en/download/manual.jsp)
    
@@ -31,15 +31,15 @@ LambdaTest integration with Selenide automation framework will help you pace you
    
    ![altext](https://github.com/keshavissar001/selenide-testng-sample/blob/keshavissar001-patch-1/Img1.png)
    
-   ii. For Linux :
+#### For Linux :
    
    use this command :
    ```
    sudo apt-get install openjdk-8-jre
    ```
-   iii. For Mac
+#### For Mac
    
-   Java should already be present on Mac OS X by default
+   Java should already be present on Mac OS X by default.
    
    ### 2. Maven Installation
    
@@ -71,7 +71,9 @@ LambdaTest integration with Selenide automation framework will help you pace you
   **Step 4:** Under the folder **“selenide-testng-sample-master”**, add your LambdaTest `username` and `accessKey` to the `src/test/resources/conf` in “selenide-testng-sample-master”
  [For Lambdatest Credentials, Go to Lambdatest Profile Page](https://accounts.lambdatest.com/profile) 
   
-Here is single.conf.json file to setup mandatory details to run at LambdaTest. You would need to put your LambdaTest authentication credentials (Access key & Username) :
+**Note:** The *conf.json* files will help you to specify the configurations/capabilities over which you wish your Selenide test scripts to run. It is necessary to put your LambdaTest authentication credentials i.e. ***your LambdaTest Access Key*** & ***your LambdaTest Username*** in *conf.json* file to run your Selenide script over LambdaTest Selenium Grid. 
+
+Here is **single.conf.json** file to setup mandatory details to run at LambdaTest. We're running our first script over Windows 10 and Google Chrome 72 as specified in the environment and we're also passing few capabilities to specify the build name and whether we want network logs, console logs, and more for our test execution.
 
 ```
 
@@ -100,104 +102,22 @@ Here is single.conf.json file to setup mandatory details to run at LambdaTest. Y
 }
 
 ```
+**Note:** You can easily find these capabilities using the LambdaTest Desired Capabilities Generator.
 
-Here is parallel.conf.json file to setup mandatory details to run at LambdaTest. You would need to put your LambdaTest authentication credentials (Access key & Username) :
+![LambdaTest Desired Capabilities Generator](https://www.lambdatest.com/blog/wp-content/uploads/2019/11/Lambdatest_capability_generator.png)
 
-```
+   
+## Running Your First Selenium Automation Test Over LambdaTest Selenium Grid
 
-{
-	"server": "hub.lambdatest.com",
-	
-	"user": "YOUR_USERNAME",      //put Your User Name here
-	
-	"key": "YOUR_ACCESS_KEY",     //put Your Access Key here
-
-	"capabilities": {
-		"build": "Java Selenide Parallel",
-		"visual": true,
-		"network": true,
-		"console": true,
-		"tunnel": false
-	},
-
-	"environments": {
-		"chrome": {
-		    "platform": "windows 10",
-			"browserName": "chrome",
-			"version":"72"
-		},
-		"firefox": {
-			"platform": "windows 8.1",
-			"browserName": "firefox",
-			"version":"65"
-		},
-		"safari": {
-			"platform": "macOS Mojave",
-			"browserName": "safari",
-			"version":"12"
-		}
-	}
-}
-
-```
-
-Here is suite.conf.json file to setup mandatory details to run at LambdaTest. You would need to put your LambdaTest authentication credentials (Access key & Username) :
-
-```
-
-{
-	"server": "hub.lambdatest.com",
-	
-	"user": "YOUR_USERNAME",      //put Your User Name here
-	
-	"key": "YOUR_ACCESS_KEY",     //put Your Access Key here
-
-	"capabilities": {
-		"build": "Java Selenide Suite",
-		"visual": true,
-		"network": true,
-		"console": true,
-		"tunnel": false
-	},
-
-	"environments": {
-		"chrome": {
-			"platform": "windows 10",
-			"browserName": "chrome",
-			"version":"72"
-		},
-		"firefox": {
-			"platform": "windows 8.1",
-			"browserName": "firefox",
-			"version":"65"
-		},
-		"safari": {
-			"platform": "macOS Mojave",
-			"browserName": "safari",
-			"version":"12"
-		},
-		"edge": {
-			"platform": "windows 10",
-			"browserName": "MicrosoftEdge",
-			"version":"18"
-		}
-	}
-}
-
-```
-
- Make sure to install the mandatory Selenium dependencies for Maven by running the below command :
+**Note:** Make sure to install the mandatory Selenium dependencies for Maven by running the below command :
 
     mvn compile 
   
 ![altext](https://github.com/keshavissar001/images/blob/master/mvnCompile.png)
 
-   
-### 5. Running your tests
+Let’s start with a simple Selenium Remote Webdriver test first. This Selenide script below tests whether the expected title is same as that of given page.
 
-Let’ start with a simple Selenium Remote Webdriver test first. This Selenide script below tests whether the expected title is same as that of given page.
-
-This is LambdaTestSetup.java file that is executed before and after every method for setting up the remote webdriver and desired capabilities :
+This is **LambdaTestSetup.java** file that is executed before and after every method for setting up the remote webdriver and desired capabilities :
 
 ```
 
@@ -295,7 +215,7 @@ public class LambdaTestSetup {
 
 ```
 
-Now here is the sample test file (SingleTest.java file) which is to be executed for the automation test through LambdaTest :
+Now, here is the sample test file **SingleTest.java file** which is to be executed for the automation test through LambdaTest Selenium Grid.
 
 ```
 
@@ -335,7 +255,7 @@ public class SingleTest extends LambdaTestSetup {
 
 ```
 
-This is single.testng.xml file that is used to run the test :
+Next, let us look into the XML file **single.testng.xml** that is used to run the Selenide test over LambdaTest Selenium Grid.
 
 ```
 
@@ -353,7 +273,7 @@ This is single.testng.xml file that is used to run the test :
 
 ```
 
-### Execute The Test
+### Execute Single Selenide Test Over LambdaTest Selenium Grid
 
 You would need to execute the below command in your terminal/cmd :
 
@@ -365,9 +285,49 @@ This is the screenshot of the output :
 
    ![altext](https://github.com/keshavissar001/images/blob/master/singleTestResult.png)
 
-### Executing Parallel Tests In Selenide Automation Framework
+## Executing Parallel Tests In Selenide Automation Framework
 
 One of the most important features of LambdaTest Selenium grid is the ability to run your test cases in parallel. What that means is that if you have more than one concurrent session, you can run your test cases on more than one machine at a time, which greatly cuts down your test times. To put it in perspective, if you have 100 test cases each with an average run time of 1 minute, without parallel testing it would take 100 minutes to execute. However, with 2 concurrent sessions, you can run 2 test cases in parallel at a time and can cut down the build’s test time to 50 minutes. With four concurrent sessions, it would cut down to 25 minutes. With eight, well you got the picture.
+
+Here is **parallel.conf.json** file to setup mandatory details to run at LambdaTest. You would need to put your LambdaTest authentication credentials (Access key & Username) :
+
+```
+
+{
+	"server": "hub.lambdatest.com",
+	
+	"user": "YOUR_USERNAME",      //put Your User Name here
+	
+	"key": "YOUR_ACCESS_KEY",     //put Your Access Key here
+
+	"capabilities": {
+		"build": "Java Selenide Parallel",
+		"visual": true,
+		"network": true,
+		"console": true,
+		"tunnel": false
+	},
+
+	"environments": {
+		"chrome": {
+		    "platform": "windows 10",
+			"browserName": "chrome",
+			"version":"72"
+		},
+		"firefox": {
+			"platform": "windows 8.1",
+			"browserName": "firefox",
+			"version":"65"
+		},
+		"safari": {
+			"platform": "macOS Mojave",
+			"browserName": "safari",
+			"version":"12"
+		}
+	}
+}
+
+```
 
 This is parallel.testng.xml file that is used to run the test :
 
@@ -403,7 +363,7 @@ This is parallel.testng.xml file that is used to run the test :
 
 ```
 
-### Execute The Test
+### Execute Selenide Tests In Parallel Over LambdaTest Selenium Grid
 
 You would need to execute the below command in your terminal/cmd :
 
@@ -416,11 +376,55 @@ This is the screenshot of the output :
 
 ![altext](https://github.com/keshavissar001/images/blob/master/ParallelResult.png)
 
-### Executing Test Suite In Selenide Automation Framework
+## Executing Test Suite In Selenide Automation Framework
 
-Now here are the test suites file which will be executed for the automation test through LambdaTest :
+Similarly, if you wish to run your entire Java Selenide test suite then you can use the below **suite.conf.json** and specify your desired capabilities along with your LambdaTest authentification credentials.
+```
 
-SuiteTest01.java :
+{
+	"server": "hub.lambdatest.com",
+	
+	"user": "YOUR_USERNAME",      //put Your User Name here
+	
+	"key": "YOUR_ACCESS_KEY",     //put Your Access Key here
+
+	"capabilities": {
+		"build": "Java Selenide Suite",
+		"visual": true,
+		"network": true,
+		"console": true,
+		"tunnel": false
+	},
+
+	"environments": {
+		"chrome": {
+			"platform": "windows 10",
+			"browserName": "chrome",
+			"version":"72"
+		},
+		"firefox": {
+			"platform": "windows 8.1",
+			"browserName": "firefox",
+			"version":"65"
+		},
+		"safari": {
+			"platform": "macOS Mojave",
+			"browserName": "safari",
+			"version":"12"
+		},
+		"edge": {
+			"platform": "windows 10",
+			"browserName": "MicrosoftEdge",
+			"version":"18"
+		}
+	}
+}
+
+```
+
+Now, here are the files in the Selenide test suites which will all be executed over LambdaTest Selenium Grid Cloud.
+
+#### SuiteTest01.java
 
 ```
 
@@ -464,7 +468,7 @@ public class SuiteTest01 extends LambdaTestSetup {
 
 ```
 
-SuiteTest02.java :
+#### SuiteTest02.java
 
 ```
 
@@ -505,7 +509,7 @@ public class SuiteTest02 extends LambdaTestSetup {
 
 ```
 
-SuiteTest03.java :
+#### SuiteTest03.java
 
 ```
 
@@ -546,7 +550,7 @@ public class SuiteTest03 extends LambdaTestSetup {
 
 ```
 
-SuiteTest04.java :
+#### SuiteTest04.java
 
 ```
 
@@ -587,7 +591,7 @@ public class SuiteTest04 extends LambdaTestSetup {
 
 ```
 
-This is suite.testng.xml file that is used to run the test :
+This is **suite.testng.xml** file that is used to run the test :
 
 ```
 
@@ -641,7 +645,7 @@ This is suite.testng.xml file that is used to run the test :
 
 ```
 
-### Execute The Test
+### Execute The Selenide Test Suite Over LambdaTest Selenium Grid Cloud
 
 You would need to execute the below command in your terminal/cmd :
 
