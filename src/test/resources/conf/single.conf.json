@@ -4,18 +4,14 @@
 	"key": "YOUR_ACCESS_KEY",
 
 	"capabilities": {
-		"build": "Java Selenide Single",
-		"visual": true,
-		"network": true,
-		"console": true,
-		"tunnel": false
+		"build": "Java Selenide Single"
 	},
 
 	"environments": {
 		"chrome": {
 		    "platform": "windows 10",
 			"browserName": "chrome",
-			"version":"72"
+			"version":"latest"
 		}
 	}
 }

@@ -4,33 +4,29 @@
 	"key": "YOUR_ACCESS_KEY",
 
   "capabilities": {
-    "build": "Java Selenide Suite",
-    "visual": true,
-	"network": true,
-	"console": true,
-	"tunnel": false
+    "build": "Java Selenide Suite"
   },
 
   "environments": {
    "chrome": {
 		    "platform": "windows 10",
 			"browserName": "chrome",
-			"version":"72"
+			"version":"latest"
 		},
 	"firefox": {
 			"platform": "windows 8.1",
 			"browserName": "firefox",
-			"version":"65"
+			"version":"latest"
 		},
 	"safari": {
 			"platform": "macOS Mojave",
 			"browserName": "safari",
-			"version":"12"
+			"version":"latest"
 		},
     "edge": {
       		"platform": "windows 10",
 		     "browserName": "MicrosoftEdge",
-			 "version":"18"
+			 "version":"latest"
     }
   }
 }
