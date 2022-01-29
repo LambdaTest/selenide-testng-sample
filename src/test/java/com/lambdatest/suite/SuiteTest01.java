@@ -1,4 +1,5 @@
 package com.lambdatest.suite;
+
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
@@ -12,20 +13,19 @@ import com.lambdatest.LambdaTestSetup;
 
 public class SuiteTest01 extends LambdaTestSetup {
 
-	private String status="failed";
-	
+	private String status = "failed";
+
 	@Test
 	public void test() throws Exception {
 
-		open("http://www.google.co.uk");
+		open("http://www.google.com");
 
 		$(By.name("q")).setValue("LambdaTest").pressEnter();
 
 		sleep(2000);
 
 		Assert.assertEquals(title(), "LambdaTest - Google Search");
-		status="passed";
+		status = "passed";
 	}
 
-	
 }

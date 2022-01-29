@@ -1,4 +1,5 @@
 package com.lambdatest.suite;
+
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
@@ -11,18 +12,18 @@ import org.testng.annotations.Test;
 import com.lambdatest.LambdaTestSetup;
 
 public class SuiteTest04 extends LambdaTestSetup {
-	
+
     @Test
     public void test() throws Exception {
 
-    	open("http://www.google.co.uk");
+        open("http://www.google.com");
 
         $(By.name("q")).setValue("LambdaTest Pricing").pressEnter();
 
         sleep(2000);
 
         Assert.assertEquals(title(), "LambdaTest Pricing - Google Search");
-        status="passed";
-       }
-  
+        status = "passed";
+    }
+
 }
