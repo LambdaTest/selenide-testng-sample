@@ -11,8 +11,7 @@
 		"chrome": {
 		    "platform": "windows 10",
 			"browserName": "chrome",
-			"version":"latest",
-			"geoLocation":"US"
+			"version":"latest"
 		}
 	}
 }

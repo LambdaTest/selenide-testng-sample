@@ -16,13 +16,17 @@ public class SuiteTest03 extends LambdaTestSetup {
     @Test
     public void test() throws Exception {
 
-        open("http://www.google.com");
+        open("https://lambdatest.github.io/sample-todo-app/");
 
-        $(By.name("q")).setValue("LambdaTest Live Testing").pressEnter();
+        $(By.name("li1")).click();
+        $(By.name("li2")).click();
+        $(By.id("sampletodotext")).setValue("Complete LambdaTest Tutorial.").pressEnter();
 
+        String newElem = $(By.xpath("/html/body/div/div/div/ul/li[6]/span")).getText();
         sleep(2000);
 
-        Assert.assertEquals(title(), "LambdaTest Live Testing - Google Search");
+        Assert.assertEquals(newElem, "Complete LambdaTest Tutorial.");
+
         status = "passed";
     }
 
