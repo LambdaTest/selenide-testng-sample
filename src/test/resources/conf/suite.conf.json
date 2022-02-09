@@ -11,22 +11,26 @@
    "chrome": {
 		    "platform": "windows 10",
 			"browserName": "chrome",
-			"version":"latest"
+			"version":"latest",
+			"geoLocation":"US"
 		},
 	"firefox": {
 			"platform": "windows 8.1",
 			"browserName": "firefox",
-			"version":"latest"
+			"version":"latest",
+			"geoLocation":"US"
 		},
 	"safari": {
 			"platform": "macOS Mojave",
 			"browserName": "safari",
-			"version":"latest"
+			"version":"latest",
+			"geoLocation":"US"
 		},
     "edge": {
       		"platform": "windows 10",
 		     "browserName": "MicrosoftEdge",
-			 "version":"latest"
+			 "version":"latest",
+			 "geoLocation":"US"
     }
   }
 }

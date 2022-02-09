@@ -26,7 +26,6 @@ public class SuiteTest04 extends LambdaTestSetup {
         sleep(2000);
 
         Assert.assertEquals(newElem, "Complete LambdaTest Tutorial.");
-
         status = "passed";
     }
 
