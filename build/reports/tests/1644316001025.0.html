@@ -1,0 +1,96 @@
+<html><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+<title>Sample page - lambdatest.com</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+
+<style type="text/css">
+.well {
+  font-size: 32px;
+
+}
+.done-true {
+	text-decoration: line-through;
+	color: grey;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+  margin: 15px;
+}</style>
+
+
+<script type="text/javascript">
+angular.module('sampleApp', [])
+  .controller('SampleListController', function() {
+    var sampleList = this;
+    sampleList.sampletodos = [
+      {text:'First Item', done:false, name: 'li1'},
+      {text:'Second Item', done:false, name: 'li2'},
+      {text:'Third Item', done:false, name: 'li3'},
+      {text:'Fourth Item', done:false, name: 'li4'},
+      {text:'Fifth Item', done:false, name: 'li5'}];
+
+    sampleList.addsampletodo = function() {
+      sampleList.sampletodos.push({text:sampleList.sampletodoText, done:false, name:'li'+(sampleList.sampletodos.length+1)});
+      sampleList.sampletodoText = '';
+    };
+
+    sampleList.remaining = function() {
+      var count = 0;
+      angular.forEach(sampleList.sampletodos, function(sampletodo) {
+        count += sampletodo.done ? 0 : 1;
+      });
+      return count;
+    };
+  });
+</script>
+</head>
+
+<body>
+
+	<div ng-app="sampleApp" class="ng-scope">
+  	<div class="container">
+  		<h2>LambdaTest Sample App</h2>
+  		<div class="well ng-scope" ng-controller="SampleListController as sampleList">
+  			<span class="ng-binding">3 of 5 remaining</span>
+
+  			<ul class="list-unstyled">
+  				<!-- ngRepeat: sampletodo in sampleList.sampletodos --><li ng-repeat="sampletodo in sampleList.sampletodos" class="ng-scope">
+  					<input type="checkbox" ng-model="sampletodo.done" name="li1" class="ng-valid ng-dirty ng-valid-parse ng-touched">
+  					<span class="done-true">First Item</span>
+  				</li><!-- end ngRepeat: sampletodo in sampleList.sampletodos --><li ng-repeat="sampletodo in sampleList.sampletodos" class="ng-scope">
+  					<input type="checkbox" ng-model="sampletodo.done" name="li2" class="ng-untouched ng-valid ng-dirty ng-valid-parse">
+  					<span class="done-true">Second Item</span>
+  				</li><!-- end ngRepeat: sampletodo in sampleList.sampletodos --><li ng-repeat="sampletodo in sampleList.sampletodos" class="ng-scope">
+  					<input type="checkbox" ng-model="sampletodo.done" name="li3" class="ng-pristine ng-untouched ng-valid">
+  					<span class="done-false">Third Item</span>
+  				</li><!-- end ngRepeat: sampletodo in sampleList.sampletodos --><li ng-repeat="sampletodo in sampleList.sampletodos" class="ng-scope">
+  					<input type="checkbox" ng-model="sampletodo.done" name="li4" class="ng-pristine ng-untouched ng-valid">
+  					<span class="done-false">Fourth Item</span>
+  				</li><!-- end ngRepeat: sampletodo in sampleList.sampletodos --><li ng-repeat="sampletodo in sampleList.sampletodos" class="ng-scope">
+  					<input type="checkbox" ng-model="sampletodo.done" name="li5" class="ng-pristine ng-untouched ng-valid">
+  					<span class="done-false">Fifth Item</span>
+  				</li><!-- end ngRepeat: sampletodo in sampleList.sampletodos -->
+  			</ul>
+
+  			<form ng-submit="sampleList.addsampletodo()" class="ng-pristine ng-valid">
+  				<input type="text" id="sampletodotext" ng-model="sampleList.sampletodoText" size="30" placeholder="Want to add more" class="ng-pristine ng-untouched ng-valid">
+  				<input class="btn btn-primary" type="submit" id="addbutton" value="add">
+  			</form>
+  		</div>
+  	</div>
+  </div>
+
+
+
+
+</body></html>
