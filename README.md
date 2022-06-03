@@ -24,6 +24,13 @@
 
 [<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register)
 
+## Table Of Contents
+
+* [Pre-requisites](#pre-requisites)
+* [Run Your First Test](#run-your-first-test)
+* [Parallel Testing With Selenide](#run-parallel-tests-using-selenide)
+* [Local Testing With Selenide](#testing-locally-hosted-or-privately-hosted-projects)
+
 ## Pre-requisites
 
 Before you can start performing Java automation testing with Selenide, you would need to:
@@ -107,8 +114,6 @@ mvn test -P single
 
 
 Refer to the [parallel.testng.xml](https://github.com/LambdaTest/selenide-testng-sample/blob/master/config/parallel.testng.xml) file which would help you to run a single test on various browsers at the same time, you would also need to generate a config file [parallel.config.json](https://github.com/LambdaTest/selenide-testng-sample/blob/master/src/test/resources/conf/parallel.conf.json) to define capabilities of the browsers.
-
-### Executing Parallel Tests Using Selenide
 
 To run parallel tests using Selenide, we would have to execute the below command in the terminal:
 
