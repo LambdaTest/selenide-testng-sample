@@ -1,7 +1,7 @@
 # Run Selenium Tests With Selenide On LambdaTest
 
 
-<img height="400" src="https://user-images.githubusercontent.com/70570645/171945980-8cbfdf2a-ced4-499a-8f07-4185d10321d2.png">
+![image](https://user-images.githubusercontent.com/70570645/172183152-cbcd0281-6847-49a9-af55-c966a9a48b91.png)
 
 <p align="center">
   <a href="https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=selenide-testng-sample" target="_bank">Blog</a>
