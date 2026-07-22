@@ -14,13 +14,13 @@ public class SingleTest extends LambdaTestSetup {
 	@Test
 	public void test() throws Exception {
 
-		open("https://lambdatest.github.io/sample-todo-app/");
+		open("https://www.testmuai.com/selenium-playground/todo-app/");
 
 		$(By.name("li1")).click();
 		$(By.name("li2")).click();
 		$(By.id("sampletodotext")).setValue("Complete LambdaTest Tutorial.").pressEnter();
 
-		String newElem = $(By.xpath("/html/body/div/div/div/ul/li[6]/span")).getText();
+		String newElem = $(By.xpath("//input[@name='li6']/following-sibling::span")).getText();
 		sleep(2000);
 
         Assert.assertEquals(newElem.trim(), "Complete LambdaTest Tutorial.");
