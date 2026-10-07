@@ -58,6 +58,10 @@ public class LambdaTestSetupSmartUI {
         ltOptions.setCapability("name", this.getClass().getName());
         ltOptions.setCapability("smartUI.project", "Selenide-Java");
 
+        if(System.getenv("BUILD_NAME")!=null && System.getenv("BUILD_NAME")!=""){
+            ltOptions.setCapability("smartUI.build",System.getenv("BUILD_NAME"));
+        }
+
         if (envCapabilities.containsKey("browserName")) {
             capabilities.setCapability("browserName", envCapabilities.get("browserName"));
         }
