@@ -1,7 +1,5 @@
 # Run Selenium Tests with Selenide and TestNG on TestMu AI (Formerly LambdaTest)
 
-> Automated End-to-End (E2E) testing of web apps with Selenide and TestNG across real browsers and operating systems on TestMu AI.
-
 <p align="center">
   <a href="https://www.testmuai.com/"><img src="https://img.shields.io/badge/MADE%20BY%20TestMu%20AI-000000.svg?style=for-the-badge&labelColor=000" alt="Made by TestMu AI"></a>
   <a href="https://search.maven.org/artifact/com.codeborne/selenide"><img src="https://img.shields.io/maven-central/v/com.codeborne/selenide.svg?style=for-the-badge&labelColor=000000" alt="Selenide version"></a>
@@ -12,7 +10,7 @@
 
 [TestMu AI](https://www.testmuai.com/) (Formerly LambdaTest) is the world's first full-stack AI Agentic Quality Engineering platform that empowers teams to test intelligently, smarter, and ship faster. Built for scale, it offers a full-stack testing cloud with 10K+ real devices and 3,000+ browsers. With AI-native test management, MCP servers, and agent-based automation, TestMu AI supports Selenium, Appium, Playwright, and all major frameworks. 
 
-With TestMu AI (Formerly LambdaTest), you can run Java Selenide and TestNG automation tests across real browsers and operating systems. This sample shows how to configure Java + Selenide + TestNG to run on the TestMu AI cloud.
+With TestMu AI (Formerly LambdaTest), you can perform End-to-End (E2E) testing by running Java Selenide and TestNG automation tests across real browsers and operating systems. This sample shows how to configure Java + Selenide + TestNG to run on the TestMu AI cloud.
 
 - [Sign up on TestMu AI](https://www.testmuai.com/register/) (Formerly LambdaTest).
 - Follow the [Run Selenide tests with Selenium on TestMu AI](https://www.testmuai.com/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/) for the full setup walkthrough.
